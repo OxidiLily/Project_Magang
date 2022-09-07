@@ -31,6 +31,7 @@ body {
         right: 25px;
         font-size: 36px;
         margin-left: 50px;
+        padding-top: 25px;
       }
   }
   .LogoMenu{
@@ -43,7 +44,18 @@ body {
     background-color: #111;
     overflow-x: hidden;
     padding-top: 20px;
-    
+    padding-bottom: 30px;
+    a{
+      color:white;
+      margin-left: 10px;
+      margin-top: 11px;
+      margin-bottom: 12px;
+      
+    }
+    a:link{
+      text-decoration: none;
+      margin: top 30px;
+    }
 }
 #main {
     transition: margin-left .5s;
@@ -54,6 +66,7 @@ body {
         cursor:pointer;
         color:white;
         padding-left: 10px;
+        
       }
   }
   
