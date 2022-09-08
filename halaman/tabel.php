@@ -14,10 +14,19 @@
 <body>
 
 <table id="example" class="display" style="width:100%">
+    <?php 
+        include "../koneksi/koneksi.php";
+        $sql = mysqli_query($konek, "SELECT * FROM agenda");
+        $no = 1;
+        if(mysqli_num_rows($sql)>0){
+            while($row = mysqli_fetch_array($sql)){
+                
+    ?>
         <thead>
             <tr>
                 <th>No</th>
                 <th>Kegiatan</th>
+                <th>Tanggal</th>
                 <th>Jam Pelaksanaan</th>
                 <th>Tempat</th>
                 <th>Penanggung Jawab</th>
@@ -26,41 +35,27 @@
         </thead>
         <tbody>
             <tr>
-                <td>1</td>
-                <td>Upacara</td>
-                <td>07.00</td>
-                <td>lapangan</td>
-                <td>Abdul Aziz</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Rapat</td>
-                <td>09.00</td>
-                <td>Semarang Barat</td>
-                <td>Abdul</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Kunjungan</td>
-                <td>12.00</td>
-                <td>Kantor Pusat</td>
-                <td>Aziz</td>
-                <td>Melakukan kunjungan kerja dengan anggota baru. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque beatae ullam aliquid delectus odio, itaque provident harum aliquam maiores, quis possimus alias eos nulla. Reiciendis illo tempora nemo ex numquam!</td>
+                <td><?php echo $no; ?></td>
+                <td><?php echo $row['kegiatan']; ?></td>
+                <td><?php echo $row['tanggal']; ?></td>
+                <td><?php echo $row['waktu']; ?></td>
+                <td><?php echo $row['tempat']; ?></td>
+                <td><?php echo $row['tanggung_jawab']; ?></td>
+                <td><?php echo $row['keterangan']; ?></td>
             </tr>
             </tbody>
         <tfoot>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>No</th>
+                <th>Kegiatan</th>
+                <th>Tanggal</th>
+                <th>Jam Pelaksanaan</th>
+                <th>Tempat</th>
+                <th>Penanggung Jawab</th>
+                <th>Keterangan</th>
             </tr>
         </tfoot>
-
+    <?php } } ?>
 </table>
 </body>
 </html> 
