@@ -58,5 +58,5 @@
   
     // Menampilkan Format Tanggal Indonesia
     $hari_ini = date('Y-m-d');
-    echo 'Hari ini : '.dateIndonesia($hari_ini);
+    echo ''.dateIndonesia($hari_ini);
 ?>

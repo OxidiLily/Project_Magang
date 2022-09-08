@@ -9,21 +9,14 @@
 <body>
 
 <div class="header">
-  <a href="#default" class="logo">CompanyLogo</a>
+  <img class="logo" src="../gambar/logo.png" alt="CompanyLogo">
   
-  <h3>INFORMASI KEGIATAN DAN AGENDA</h3><br><br>
+  <h2>INFORMASI KEGIATAN DAN AGENDA</h2><br><br>
   <h5>DINAS KEPENDUDUKAN DAN CATATAN SIPIL</h5>
-  
+  <br>
   <div class="header-right">
-    <a class="nav-link disabled"><?php include '../halaman/tanggal/tgl.php';?></a>
+    <p class="tgl"><?php include '../halaman/tanggal/tgl.php';?></p>
   </div>
 </div>
-
-<div style="padding-left:20px">
-  <h1>Responsive Header</h1>
-  <p>Resize the browser window to see the effect.</p>
-  <p>Some content..</p>
-</div>
-
 </body>
 </html>

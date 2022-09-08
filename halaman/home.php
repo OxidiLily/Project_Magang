@@ -12,7 +12,7 @@
   <div class="closebtn"> 
   <a href="javascript:void(0)" class='fas fa-angle-left' onclick="closeNav()" >&#xf104;</a>
   </div>
-  <a href="../halaman/header/header.php" >Dashboard</a>
+  <a href="../halaman/dashboard.php">Dashboard</a>
   <a href="#">Input Agenda</a>
   <a href="#">Cetak Agenda</a>
   <a href="#">Keluar</a>
