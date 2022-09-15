@@ -17,10 +17,10 @@
     <a href="javascript:void(0)" class='fas fa-angle-left' onclick="closeNav()" >&#xf104;</a>
   </div>
 
-  <a href="#" >Dashboard</a>
-  <a href="#">Input Agenda</a>
+  <a href="../halaman/dashboard.php">Dashboard</a>
+  <a href="../halaman/inputdata.php">Input Agenda</a>
   <a href="#">Cetak Agenda</a>
-  <a href="#">Keluar</a>
+  <a href="../halaman/validasiLogout.php">Keluar</a>
   
 </div>
 
@@ -29,17 +29,17 @@
 
   <div class="LogoMenu">
     <span onclick="openNav()">&#9776;</span>
-    <a class='fas'href="#" style='font-size:24px'>&#xf015;</a>
-    <a class='fas'href="#" style='font-size:24px'>&#xf11c;</a>
+    <a class='fas'href="../halaman/dashboard.php" style='font-size:24px'>&#xf015;</a>
+    <a class='fas'href="../halaman/inputdata.php" style='font-size:24px'>&#xf11c;</a>
     <a class='fas'href="#" style='font-size:24px'>&#xf02f;</a>
-    <a class='fas'href="#" style='font-size:24px'>&#xf011;</a>
+    <a class='fas'href="../halaman/validasiLogout.php" style='font-size:24px'>&#xf011;</a>
   </div>
 
   <p class="atas">Jadwal Kegiatan dan Agenda Hari Ini</p>
 
   <div class="bawah">
     <div class="tabel">
-      <?php include '../halaman/tabel.php'?>
+      <?php include '../halaman/tabel/tabel.php'?>
     </div>
     
   </div>

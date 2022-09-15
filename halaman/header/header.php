@@ -15,7 +15,8 @@
   <h5>DINAS KEPENDUDUKAN DAN CATATAN SIPIL</h5>
   <br>
   <div class="header-right">
-    <p class="tgl"><?php include '../halaman/tanggal/tgl.php';?></p>
+    <p class="tgl"><?php include '../halaman/waktu/jam.php';?></p>
+    <p class="tgl"><?php include '../halaman/waktu/tgl.php';?></p>
   </div>
 </div>
 </body>

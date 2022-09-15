@@ -47,7 +47,7 @@ body {
   padding-top: 20px;
   padding-bottom: 30px;
 }
-.LogoMenu a {
+.LogoMenu p, .LogoMenu a {
   color: white;
   margin-left: 10px;
   margin-top: 11px;
