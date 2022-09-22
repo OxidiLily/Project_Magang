@@ -22,7 +22,17 @@
 <!--===============================================================================================-->
 </head>
 <body>
-	
+<?php 
+	if(isset($_GET['pesan'])){
+		if($_GET['pesan'] == "gagal"){
+			echo "Login gagal! username dan password salah!";
+		}else if($_GET['pesan'] == "logout"){
+			echo "Anda telah berhasil logout";
+		}else if($_GET['pesan'] == "belum_login"){
+			echo "Anda harus login untuk mengakses halaman admin";
+		}
+	}
+	?>
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
@@ -30,13 +40,13 @@
 					<img src="images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="../../../kueri/cek_login.php" method="post">
 					<span class="login100-form-title">
 						Admin Login
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email" placeholder="Email">
+						<input class="input100" type="text" name="user" placeholder="Username">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -59,7 +69,7 @@
 						</button> -->
 
 						<!-- Edit -->
-							<a class="login100-form-btn" href="../../dashboard.php">Login</a>
+							<button class="login100-form-btn" type="submit" name="login">Login</button>
 						
 					</div>
 

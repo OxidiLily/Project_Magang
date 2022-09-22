@@ -1,5 +1,5 @@
 
-  <form>
+  <form action="database/input.php" method="POST">
   <div class="form-group">
     <label for="Kegiatan">Kegiatan</label>
     <input type="text" class="form-control" id="Kegiatan" placeholder="Kegiatan">

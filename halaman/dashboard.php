@@ -23,6 +23,7 @@
   <a href="../halaman/validasiLogout.php">Keluar</a>
   
 </div>
+<!-- cek pesan notifikasi -->
 
 <div id="main">
   <?php include '../halaman/header/header.php';?>
