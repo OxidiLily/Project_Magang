@@ -1,3 +1,3 @@
 <?php 
-header('location: halaman/admin/login/login.php');
+header('location: halaman/dashboard/dashboard.php');
 ?>

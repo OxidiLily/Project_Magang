@@ -9,7 +9,7 @@ if(isset($_POST['login'])){
     // cek username
     if(mysqli_num_rows($qry) > 0){
         // cek password
-        header("location:../halaman/dashboard.php");
+        header("location:../halaman/admin/dashboard.php");
     }
     else{
         header("location:../halaman/admin/login/login.php?pesan=gagal");
