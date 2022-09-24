@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../../css/sidebar.css">
-<link rel="stylesheet" href="../../css/dashboard.css">
+<link rel="stylesheet" href="../../css/dashboard_admin.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 <script src="../../js/sidebar.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -18,10 +18,7 @@
     <?php 
         include "../../koneksi/koneksi.php";
         $sql = mysqli_query($konek, "SELECT * FROM agenda");
-        $no = 1;
-        if(mysqli_num_rows($sql)>0){
-            while($row = mysqli_fetch_array($sql)){
-                
+            
     ?>
         <thead>
             <tr>
@@ -36,8 +33,12 @@
             </tr>
         </thead>
         <tbody>
+            <?php
+            if(mysqli_num_rows($sql)>0){
+                while($row = mysqli_fetch_array($sql)){
+        ?>
             <tr>
-                <td><?php echo $no; ?></td>
+                <td><?php echo $row['id'];?></td>
                 <td><?php echo $row['kegiatan']; ?></td>
                 <td><?php echo $row['tanggal']; ?></td>
                 <td><?php echo $row['waktu']; ?></td>
@@ -51,7 +52,10 @@
                     <button data-toggle="modal" data-target="#HapusDataTabel" type="button" class="btn btn-danger">Hapus</button>
                     <?php include "../command/hapusdatatabel.php";?>
                 </td>
-            </tr>
+                </tr>
+        <?php 
+        } }
+         ?>
             </tbody>
         <tfoot>
             <tr>
@@ -65,7 +69,7 @@
                 <th>Aksi</th>
             </tr>
         </tfoot>
-    <?php } } ?>
+   
 </table>
 </body>
 </html> 

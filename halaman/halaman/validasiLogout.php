@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../css/sidebar.css">
-<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/dashboard_admin.css">
 <script src="../js/sidebar.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
@@ -37,7 +37,7 @@
 
   <div class="valkeluar">
       <h1>Anda Yakin Mau Keluar?</h1>
-      <a href="../halaman/dashboard.php" class="btn btn-secondary"> Batal</a>
+      <a href="../halaman/admin/dashboard.php" class="btn btn-secondary"> Batal</a>
       <a href="../halaman/admin/login/login.php" class="btn btn-danger"> Keluar</a>
   </div>
   

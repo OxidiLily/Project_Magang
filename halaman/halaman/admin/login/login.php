@@ -25,7 +25,10 @@
 <?php 
 	if(isset($_GET['pesan'])){
 		if($_GET['pesan'] == "gagal"){
-			echo "Login gagal! username dan password salah!";
+			echo '
+			<div class="alert alert-danger" style="margin-bottom: 0; text-align: center;">
+			<strong>Login gagal !!</strong> Username atau Password Salah
+			</div>';
 		}else if($_GET['pesan'] == "logout"){
 			echo "Anda telah berhasil logout";
 		}else if($_GET['pesan'] == "belum_login"){
@@ -82,9 +85,15 @@
 						</a>
 					</div>
 
-					<div class="text-center p-t-136">
+					<div class="text-center p-t-13">
 						<a class="txt2" href="#">
-							Create your Account
+							<strong>Create your Account</strong>
+							
+						</a>
+					</div>
+					<div class="text-center p-t-130">
+						<a class="txt2" href="../../dashboard/dashboard.php">
+							Back
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
 					</div>

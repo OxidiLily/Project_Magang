@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../../css/sidebar.css">
-<link rel="stylesheet" href="../../css/dashboard.css">
+<link rel="stylesheet" href="../../css/dashboard_admin.css">
 <script src="../../js/sidebar.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
@@ -26,8 +26,26 @@
 <!-- cek pesan notifikasi -->
 
 <div id="main">
-  <?php include '../header/header.php';?>
+  
+  <?php 
 
+  session_start();
+  if($_SESSION['status']!="login"){
+    header("location:../admin/login/login.php");
+  }
+
+
+  include '../header/header.php';
+
+	if(isset($_GET['pesan'])){
+		if($_GET['pesan'] == "good"){
+			echo '
+			<div class="alert alert-success" style="text-align: center;">
+			Selamat Datang !!  <strong>' .$_SESSION['username'].'</strong>
+			</div>';
+		}
+	}
+  ?>
   <div class="LogoMenu">
     <span onclick="openNav()">&#9776;</span>
     <a class='fas'href="dashboard.php" style='font-size:24px'>&#xf015;</a>
