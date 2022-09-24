@@ -40,7 +40,7 @@
 
   <div class="bawah">
     <div class="tabel">
-      <?php include '../tabel/tabel.php'?>
+      <?php include '../tabel/tabel.php';?>
     </div>
     
   </div>

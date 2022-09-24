@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2022 at 08:18 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.10
+-- Generation Time: Sep 24, 2022 at 06:22 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -42,7 +42,28 @@ CREATE TABLE `agenda` (
 --
 
 INSERT INTO `agenda` (`id`, `kegiatan`, `tanggal`, `waktu`, `tempat`, `tanggung_jawab`, `keterangan`) VALUES
-(1, 'Upacara', '2022-09-09', '07:00:00', 'Lapangan', 'Bapak', 'Ngaji');
+(1, 'Upacara', '2022-09-09', '07:00:00', 'Lapangan', 'Bapak', 'Ngaji'),
+(2, 'sadasdas', '2022-09-29', '05:22:00', 'Kampus', 'asdasdas', 'dtryndteymsegs');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `email` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `email`) VALUES
+(1, 'admin', 'admin', NULL);
 
 --
 -- Indexes for dumped tables
@@ -55,6 +76,12 @@ ALTER TABLE `agenda`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -62,6 +89,12 @@ ALTER TABLE `agenda`
 -- AUTO_INCREMENT for table `agenda`
 --
 ALTER TABLE `agenda`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 

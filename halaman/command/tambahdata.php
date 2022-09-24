@@ -21,11 +21,7 @@
             </button>
           </div>
           <div class="modal-body">
-          <?php include "../halaman/form.php";?>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Tambah Data</button>
+          <?php include "../admin/form.php";?>
           </div>
         </div>
       </div>

@@ -54,8 +54,8 @@
             <p><button data-toggle="modal" data-target="#HapusData" class="w3-button w3-red w3-round"> Hapus Semua</button></a></p>
             <?php include "../command/hapusdataall.php";?>
         </div>
-        
-        <?php include '../tabel/tabeledit.php'?>
+
+        <?php include '../tabel/tabel.php';?>
 
     </div>
     

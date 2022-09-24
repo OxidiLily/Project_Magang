@@ -18,9 +18,6 @@
         include "../../koneksi/koneksi.php";
         $sql = mysqli_query($konek, "SELECT * FROM agenda");
         $no = 1;
-        if(mysqli_num_rows($sql)>0){
-            while($row = mysqli_fetch_array($sql)){
-                
     ?>
         <thead>
             <tr>
@@ -31,10 +28,17 @@
                 <th>Tempat</th>
                 <th>Penanggung Jawab</th>
                 <th>Keterangan</th>
+                <th>Ubah Data</th>
             </tr>
         </thead>
+            
         <tbody>
+        <?php
+            if(mysqli_num_rows($sql)>0){
+                while($row = mysqli_fetch_array($sql)){
+        ?>
             <tr>
+            
                 <td><?php echo $no; ?></td>
                 <td><?php echo $row['kegiatan']; ?></td>
                 <td><?php echo $row['tanggal']; ?></td>
@@ -42,8 +46,14 @@
                 <td><?php echo $row['tempat']; ?></td>
                 <td><?php echo $row['tanggung_jawab']; ?></td>
                 <td><?php echo $row['keterangan']; ?></td>
+                <td><a href="#" class="w3-button w3-yellow w3-round">Ubah Data</a>
+                    <a href="#" class="w3-button w3-red w3-round">Hapus Data</a>
+                </td>
             </tr>
-            </tbody>
+        <?php 
+            } 
+        } ?>
+        </tbody>
         <tfoot>
             <tr>
                 <th>No</th>
@@ -53,9 +63,9 @@
                 <th>Tempat</th>
                 <th>Penanggung Jawab</th>
                 <th>Keterangan</th>
+                <th>Ubah Data</th>
             </tr>
         </tfoot>
-    <?php } } ?>
 </table>
 </body>
 </html> 

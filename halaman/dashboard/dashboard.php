@@ -34,7 +34,7 @@
     <a class='fas'href="#" style='font-size:24px'>&#xf02f;</a>
   </div>
 
-  <a href="../admin/login/login.php" class="fas" style="float:right; font-size:50px; text-decoration:none;">&#xf2bd;</a>
+  <a href="../admin/login/login.php" class="fas login-bottom">&#xf2bd;</a>
 
   <p class="atas">Jadwal Kegiatan dan Agenda Hari Ini</p>
 

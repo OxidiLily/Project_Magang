@@ -63,4 +63,11 @@ p.atas {
   font-size: 25px;
   margin-left: 60px;
   margin-right: 60px;
+}
+
+.login-bottom {
+  float: right;
+  font-size: 50px;
+  text-decoration: none;
+  margin: 10px 20px;
 }/*# sourceMappingURL=dashboard.css.map */
