@@ -14,11 +14,6 @@
 <body>
 
 <table id="example" class="display" style="width:100%">
-    <?php 
-        include "../../koneksi/koneksi.php";
-        $sql = mysqli_query($konek, "SELECT * FROM agenda");
-        $no = 1;
-    ?>
         <thead>
             <tr>
                 <th>No</th>
@@ -33,13 +28,15 @@
         </thead>
             
         <tbody>
-        <?php
-            if(mysqli_num_rows($sql)>0){
-                while($row = mysqli_fetch_array($sql)){
-        ?>
+            <?php
+                include "../../koneksi/koneksi.php";
+                $sql = mysqli_query($konek, "SELECT * FROM agenda ORDER BY tanggal");
+                $no = 1;
+                if(mysqli_num_rows($sql)>0){
+                    while($row = mysqli_fetch_array($sql)){
+            ?>
             <tr>
-            
-                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $no++; ?></td>
                 <td><?php echo $row['kegiatan']; ?></td>
                 <td><?php echo $row['tanggal']; ?></td>
                 <td><?php echo $row['waktu']; ?></td>
