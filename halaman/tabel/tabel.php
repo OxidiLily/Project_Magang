@@ -30,7 +30,8 @@
         <tbody>
             <?php
                 include "../../koneksi/koneksi.php";
-                $sql = mysqli_query($konek, "SELECT * FROM agenda ORDER BY tanggal");
+                $tanggal_sekarang = $_SESSION['tanggal_sekarang'];
+                $sql = mysqli_query($konek, "SELECT * FROM agenda where tanggal = '$tanggal_sekarang' ORDER BY waktu");
                 $no = 1;
                 if(mysqli_num_rows($sql)>0){
                     while($row = mysqli_fetch_array($sql)){

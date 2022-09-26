@@ -1,4 +1,5 @@
 <?php
+session_start();
     function dateIndonesia($date){
         if($date != '0000-00-00'){
             $date = explode('-', $date);
@@ -58,5 +59,6 @@
   
     // Menampilkan Format Tanggal Indonesia
     $hari_ini = date('Y-m-d');
+    $_SESSION['tanggal_sekarang'] = $hari_ini;
     echo ''.dateIndonesia($hari_ini);
 ?>
