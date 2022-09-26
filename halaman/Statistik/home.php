@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html>
-  
 <head>
-  
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../css/sidebar.css">
+<link rel="stylesheet" href="../../css/sidebar.css">
+<link rel="stylesheet" href="../../css/dashboard_admin.css">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="../css/dashboard.css">
-<script src="../js/sidebar.js"></script>
+<script src="../../js/sidebar.js"></script>
+<script src="style.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-<script src="../js/main.js"></script>
-<script src="style.css"></script>
-<script src="style.js"></script>
+<script src="../../js/main.js"></script>
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-  <?php include '../halaman/header/header.php';?>
 </head>
 <body>
 <!-- Tab links -->
-
+<?php include '../header/header.php';?>
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'Beranda')">Beranda</button>
   <button class="tablinks" onclick="openCity(event, 'Index')">Index</button>
