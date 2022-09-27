@@ -1,5 +1,4 @@
 <?php
-session_start();
     function dateIndonesia($date){
         if($date != '0000-00-00'){
             $date = explode('-', $date);

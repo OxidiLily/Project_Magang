@@ -51,8 +51,7 @@
         </div> 
 
         <div class="hapusData">
-            <p><button data-toggle="modal" data-target="#HapusData" class="w3-button w3-red w3-round"> Hapus Semua</button></a></p>
-            <?php include "../command/hapusdataall.php";?>
+            <p><a data-toggle="modal" data-target="#HapusData" href="#HapusData" class="w3-button w3-red w3-round" style="text-decoration:none ;">Hapus Semua</a></p>
         </div>
 
         <?php include '../tabel/tabeledit.php';?>
@@ -62,6 +61,28 @@
   </div>
   
 
+</div>
+<!-- Modal/PopUp untuk hapus semua data di tabel -->  
+<div class="modal fade" id="HapusData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <form action="../../kueri/hapusSemua.php" method="post">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="JudulModalHapus">Hapus Data</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Anda Yakin Hapus Semua Data?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-danger" name="hapusSemuaData">Hapus</button>
+      </div>
+    </div>
+    </form>
+  </div>
 </div>
 
 </body>

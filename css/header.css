@@ -10,7 +10,7 @@ body {
 .header {
   overflow: hidden;
   background-color: #9F1A1F;
-  padding: 20px 10px;
+  position: inherit;
 }
 .header img.logo {
   float: left;
