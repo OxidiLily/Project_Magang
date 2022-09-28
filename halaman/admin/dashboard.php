@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Dashboard Admin</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../../css/sidebar.css">
 <link rel="stylesheet" href="../../css/dashboard_admin.css">
@@ -19,7 +20,7 @@
 
   <a href="dashboard.php">Dashboard</a>
   <a href="inputdata.php">Input Agenda</a>
-  <a href="#">Cetak Agenda</a>
+  <a href="input_statistik.php">Input Rekap</a>
   <a href="validasiLogout.php">Keluar</a>
   
 </div>
@@ -50,7 +51,7 @@
     <span onclick="openNav()">&#9776;</span>
     <a class='fas'href="dashboard.php" style='font-size:24px'>&#xf015;</a>
     <a class='fas'href="inputdata.php" style='font-size:24px'>&#xf11c;</a>
-    <a class='fas'href="#" style='font-size:24px'>&#xf02f;</a>
+    <a class='fas'href="input_statistik.php" style='font-size:24px'>&#xf02f;</a>
     <a class='fas'href="validasiLogout.php" style='font-size:24px'>&#xf011;</a>
   </div>
 

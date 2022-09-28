@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V1</title>
+	<title>Login Admin</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -76,21 +76,6 @@
 						
 					</div>
 
-					<div class="text-center p-t-12">
-						<span class="txt1">
-							Forgot
-						</span>
-						<a class="txt2" href="#">
-							Username / Password?
-						</a>
-					</div>
-
-					<div class="text-center p-t-13">
-						<a class="txt2" href="#">
-							<strong>Create your Account</strong>
-							
-						</a>
-					</div>
 					<div class="text-center p-t-130">
 						<a class="txt2" href="../../dashboard/dashboard.php">
 							Back
