@@ -16,7 +16,7 @@
 
 <table id="example" class="display" style="width:100%">
     <?php 
-        include "../../koneksi/koneksi.php";
+        include "../../kueri/koneksi.php";
         $sql = mysqli_query($konek, "SELECT * FROM agenda");
             
     ?>
@@ -34,7 +34,7 @@
         </thead>
         <tbody>
             <?php
-                include "../../koneksi/koneksi.php";
+                include "../../kueri/koneksi.php";
                 $sql = mysqli_query($konek, "SELECT * FROM agenda ORDER BY tanggal");
                 $no = 1;
                 if(mysqli_num_rows($sql)>0){
@@ -74,7 +74,7 @@
 </table>
 <!-- Modal/PopUp untuk edit -->
 <?php 
-include "../../koneksi/koneksi.php";
+include "../../kueri/koneksi.php";
 $qry = mysqli_query($konek, "SELECT * FROM agenda ORDER BY tanggal");
 if(mysqli_num_rows($qry)>0){
     while($row = mysqli_fetch_array($qry)){ 
@@ -143,7 +143,7 @@ if(mysqli_num_rows($qry)>0){
 <?php } } ?>
 <!-- Modal/PopUp untuk hapus data -->
 <?php 
-include "../../koneksi/koneksi.php";
+include "../../kueri/koneksi.php";
 $qry = mysqli_query($konek, "SELECT * FROM agenda ORDER BY tanggal");
 if(mysqli_num_rows($qry)>0){
     while($row = mysqli_fetch_array($qry)){ 

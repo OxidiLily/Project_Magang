@@ -21,7 +21,7 @@
             </button>
           </div>
           <div class="modal-body">
-          <?php include "../admin/form.php";?>
+          <?php include "form.php";?>
           </div>
         </div>
       </div>

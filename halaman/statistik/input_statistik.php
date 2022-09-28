@@ -19,75 +19,75 @@
     <a href="javascript:void(0)" class='fas fa-angle-left' onclick="closeNav()" >&#xf104;</a>
   </div>
 
-  <a href="dashboard.php">Dashboard</a>
-  <a href="inputdata.php">Input Agenda</a>
+  <a href="../agenda/dashboard.php">Dashboard</a>
+  <a href="../agenda/inputdata.php">Input Agenda</a>
   <a href="input_statistik.php">Input Rekap</a>
-  <a href="validasiLogout.php">Keluar</a>
+  <a href="../../kueri/validasiLogout.php">Keluar</a>
   
 </div>
 <!-- cek pesan notifikasi -->
 
 <div id="main">
-  
-  <?php 
-
-  include '../header/header.php';
-
-   ?>
-
+  <?php include '../header/header.php'; ?>
     <div class="LogoMenu">
       <span onclick="openNav()">&#9776;</span>
-      <a class='fas'href="dashboard.php" style='font-size:24px'>&#xf015;</a>
-      <a class='fas'href="inputdata.php" style='font-size:24px'>&#xf11c;</a>
+      <a class='fas'href="../agenda/dashboard.php" style='font-size:24px'>&#xf015;</a>
+      <a class='fas'href="../agenda/inputdata.php" style='font-size:24px'>&#xf11c;</a>
       <a class='fas'href="input_statistik.php" style='font-size:24px'>&#xf02f;</a>
-      <a class='fas'href="validasiLogout.php" style='font-size:24px'>&#xf011;</a>
+      <a class='fas'href="../../kueri/validasiLogout.php" style='font-size:24px'>&#xf011;</a>
     </div>
   
-
+    <form action="../../kueri/statistik/inputData.php" method="post">
     <div class="stat">
+
         <h1>Input Data</h1>
-        <select class="form-select mb-3" aria-label="Default select example">
-          <option selected>Pilih Lokasi</option>
-          <option value="1">Semarang Timur</option>
-          <option value="2">Semarang Selatan</option>
-          <option value="3">Semarang Barat</option>
-          <option value="4">Semarang Utara</option>
+
+        <select class="form-select mb-3" aria-label="Default select example" name="asal">
+          <option selected value="">Pilih Lokasi</option>
+          <option value="Semarang Timur">Semarang Timur</option>
+          <option value="Semarang Selatan">Semarang Selatan</option>
+          <option value="Semarang Barat">Semarang Barat</option>
+          <option value="Semarang Utara">Semarang Utara</option>
+          <option value="Semarang Tengah">Semarang Tengah</option>
         </select>
+        <input type="hidden" name="tanggal" value="<?php echo $_SESSION['tanggal_sekarang']; ?>">
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="KTP">
+            <input type="text" class="form-control" id="floatingInput" placeholder="KTP" name="ktp">
             <label for="floatingInput">Kartu Tanda Penduduk</label>
         </div>
+
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Kartu Keluarga">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Kartu Keluarga" name="kartu_keluarga">
             <label for="floatingInput">Kartu Keluarga</label>
         </div>
 
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Surat Kematian">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Surat Kematian" name="surat_kematian">
             <label for="floatingInput">Surat Kematian</label>
         </div>
         
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Akta Kelahiran">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Akta Kelahiran" name="akta_kelahiran">
             <label for="floatingInput">Akta Kelahiran</label>
         </div>
 
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Kartu Identitas Anak">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Kartu Identitas Anak" name="kia">
             <label for="floatingInput">Kartu Identitas Anak</label>
         </div>
         
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Surat Pindah">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Surat Pindah" name="surat_pindah">
             <label for="floatingInput">Surat Pindah</label>
         </div>
         
         <div class="d-grid gap-2 d-md-block">
-            <button class="btn btn-primary" type="button">Tambah</button>
+            <button class="btn btn-primary" type="submit" name="tambah_rekap">Tambah</button>
             <button class="btn btn-danger" type="button">Batal</button>
         </div>
         
-      </div>
+    </div>
+    </form>
 
 </div>
 

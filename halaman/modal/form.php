@@ -1,5 +1,5 @@
 
-  <form action="../../kueri/input.php" method="POST">
+  <form action="../../kueri/agenda/input.php" method="POST">
   <div class="form-group">
     <label for="Kegiatan">Kegiatan</label>
     <input type="text" class="form-control" id="Kegiatan" placeholder="Kegiatan" name="kegiatan">

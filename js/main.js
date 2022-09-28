@@ -1,4 +1,38 @@
 $(document).ready(function () {
-    $('#example').DataTable();
+  $('table.display').DataTable();
 });
 
+function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+  
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+  
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+// Memilih asal tempat untuk statistik
+function selectDaerah(){
+  var lokasi = document.getElementById("Lokasi");
+  document.getElementById("hasil_pilihLokasi").value = lokasi.options[lokasi.selectedIndex].text;
+}
+// Memilih tanggal untuk statistik
+const input = document.querySelector('input[name="tanggal_cek"]');
+const showDate = document.getElementById('showDate');
+
+input.addEventListener('change', updateValue);
+
+function updateValue(e) {
+  showDate.textContent = e.target.value;
+}

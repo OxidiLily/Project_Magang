@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../koneksi/koneksi.php';
+include 'koneksi.php';
 
 if(isset($_POST['login'])){
     
@@ -13,11 +13,11 @@ if(isset($_POST['login'])){
         // cek password
         $_SESSION['username'] = $username;
         $_SESSION['status'] = "login";
-        header("location:../halaman/admin/dashboard.php?pesan=good");
+        header("location:../halaman/agenda/dashboard.php?pesan=good");
     }
     else{
         $_SESSION['status'] = "logout";
-        header("location:../halaman/admin/login/login.php?pesan=gagal");
+        header("location:../halaman/login/login.php?pesan=gagal");
     }
 }
 ?>

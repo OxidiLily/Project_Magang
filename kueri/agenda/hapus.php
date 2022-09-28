@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../css/sidebar.css">
-<link rel="stylesheet" href="../css/dashboard_admin.css">
+<link rel="stylesheet" href="../../css/sidebar.css">
+<link rel="stylesheet" href="../../css/dashboard_admin.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 <script src="../../js/sidebar.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -13,7 +13,7 @@
 </head>
 <body>
 <?php 
-include "../koneksi/koneksi.php";
+include "../koneksi.php";
 if(isset($_POST['hapusdata'])){
     $id = $_POST['id'];
     $sql = "DELETE FROM agenda WHERE id='$id'";
@@ -35,7 +35,7 @@ if(isset($_POST['hapusdata'])){
 }
 ?>
 <script>
-    var url = "../halaman/admin/inputdata.php"; // membuat url tujuan
+    var url = "../../halaman/agenda/inputdata.php"; // membuat url tujuan
     var count = 5; // membuat hitungan kedalam detik
     function countDown() {
     if (count > 0) {

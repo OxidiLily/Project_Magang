@@ -43,7 +43,7 @@
 					<img src="images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form" action="../../../kueri/cek_login.php" method="post">
+				<form class="login100-form validate-form" action="../../kueri/cek_login.php" method="post">
 					<span class="login100-form-title">
 						Admin Login
 					</span>

@@ -4,7 +4,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
 <?php
-include '../koneksi/koneksi.php';
+include '../koneksi.php';
 if(isset($_POST['tambahdata'])){
     $kegiatan = $_POST['kegiatan'];
     $tanggal = $_POST['tanggal'];
@@ -36,7 +36,7 @@ if(isset($_POST['tambahdata'])){
 ?>
 
 <script>
-    var url = "../halaman/admin/inputdata.php"; // membuat url tujuan
+    var url = "../../halaman/agenda/inputdata.php"; // membuat url tujuan
     var count = 5; // membuat hitungan kedalam detik
     function countDown() {
     if (count > 0) {

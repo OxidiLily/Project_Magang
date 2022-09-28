@@ -25,7 +25,7 @@
 
   <a href="dashboard.php">Dashboard</a>
   <a href="inputdata.php">Input Agenda</a>
-  <a href="input_statistik.php">Input Rekap</a>
+  <a href="../statistik/input_statistik.php">Input Rekap</a>
   <a href="validasiLogout.php">Keluar</a>
   
 </div>
@@ -37,8 +37,8 @@
     <span onclick="openNav()">&#9776;</span>
     <a class='fas'href="dashboard.php" style='font-size:24px'>&#xf015;</a>
     <a class='fas'href="inputdata.php" style='font-size:24px'>&#xf11c;</a>
-    <a class='fas'href="input_statistik.php" style='font-size:24px'>&#xf02f;</a>
-    <a class='fas'href="validasiLogout.php" style='font-size:24px'>&#xf011;</a>
+    <a class='fas'href="../statistik/input_statistik.php" style='font-size:24px'>&#xf02f;</a>
+    <a class='fas'href="../../kueri/validasiLogout.php" style='font-size:24px'>&#xf011;</a>
   </div>
 
   <p class="atas">Jadwal Kegiatan dan Agenda Hari Ini</p>
@@ -48,7 +48,7 @@
     <div class="tabel">
         <div class="inputData">
             <p><button data-toggle="modal" data-target="#tambahData" class="w3-button w3-blue w3-round" ><i style='font-size:16px' class='fas'>&#xf067;</i>Tambah</button></p>
-            <?php include "../command/tambahdata.php";?>
+            <?php include "../modal/tambahdata.php";?>
         </div> 
 
         <div class="hapusData">
