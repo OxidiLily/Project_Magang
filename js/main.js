@@ -22,17 +22,22 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
 // Memilih asal tempat untuk statistik
 function selectDaerah(){
   var lokasi = document.getElementById("Lokasi");
   document.getElementById("hasil_pilihLokasi").value = lokasi.options[lokasi.selectedIndex].text;
 }
-// Memilih tanggal untuk statistik
-const input = document.querySelector('input[name="tanggal_cek"]');
-const showDate = document.getElementById('showDate');
 
-input.addEventListener('change', updateValue);
-
-function updateValue(e) {
-  showDate.textContent = e.target.value;
+// fungsi untuk menampilkan hasil chart dari pencarian
+function ShowChart(Chart){
+  var i, canva;
+  // ambil class canvaChart untuk disembunyikan
+  canva = document.getElementsByClassName("canvaChart");
+  for (i = 0; i < canva.length; i++) {
+    canva[i].style.display = "none";
+  }
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(Chart).style.maxWidth = "600px";
+  document.getElementById(Chart).style.display = "block";
 }

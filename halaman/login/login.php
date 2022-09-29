@@ -77,7 +77,7 @@
 					</div>
 
 					<div class="text-center p-t-130">
-						<a class="txt2" href="../../dashboard/dashboard.php">
+						<a class="txt2" href="../dashboard/dashboard.php">
 							Back
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>

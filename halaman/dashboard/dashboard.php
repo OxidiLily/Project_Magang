@@ -44,36 +44,36 @@
 
 <div id="Index" class="tabcontent">
   <h3>Statistik</h3>
+  <form action="dashboard.php" method="get">
   <!-- pilih lokasi kecamatan untuk dicek grafiknya -->
   <select name="lokasi" id="Lokasi" onchange="selectDaerah()">
     <option selected disabled >Pilih Lokasi</option>
-    <option>Semarang Timur</option>
-    <option>Semarang Selatan</option>
-    <option>Semarang Barat</option>
-    <option>Semarang Utara</option>
-    <option>Semarang Tengah</option>
+    <option value="Semarang Timur">Semarang Timur</option>
+    <option value="Semarang Selatan">Semarang Selatan</option>
+    <option value="Semarang Barat">Semarang Barat</option>
+    <option value="Semarang Utara">Semarang Utara</option>
+    <option value="Semarang Tengah">Semarang Tengah</option>
   </select>
-  <input type="text" id="hasil_pilihLokasi" disabled >
   <!-- pilih tanggal untuk cek grafik -->
   <input type="date" name="tanggal_cek">
-  <p id="showDate"></p>
+  <button type="submit" class="login-botton" name="tampilChart" onclick="ShowChart('myChart')">Cek Data Chart</button>
+  </form>
+  <a href="dashboard.php" class="login-botton">Refresh</a>
   <!-- Chart untuk menampilkan statistik -->
-  <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-  <!-- tabel menampilkan data statistik -->
-  <p class="atas">Data Statistik</p>
-  <div class="bawah">
-    <div class="tabel">
-      <?php include_once '../tabel/tabelStatistik.php';?>
-    </div>
-  </div>
+  <canvas id="myChart" class="canvaChart"></canvas>
 </div>
+
 
 <script>
 <?php 
 include "../../kueri/koneksi.php";
-$qry = mysqli_query($konek, "SELECT * FROM statistik where id = 3");
-if(mysqli_num_rows($qry)>0){
-  while($row = mysqli_fetch_assoc($qry)){
+if(isset($_GET['tampilChart'])){
+  $lokasi = $_GET['lokasi'];
+  $cek = $_GET['tanggal_cek'];
+
+  $qry = mysqli_query($konek, "SELECT * FROM statistik WHERE asal = '$lokasi' AND tanggal = '$cek'");
+  if(mysqli_num_rows($qry)>0){
+    while($row = mysqli_fetch_assoc($qry)){
 ?>
 
 var chr = document.getElementById("myChart").getContext("2d");
@@ -82,7 +82,7 @@ var myChart = new Chart(chr, {
   data: {
     labels: ['KTP','Kartu Keluarga','Surat Kematian','Akta Kelahiran','KIA','Surat Pindah'],
     datasets: [{
-      label: '',
+      label: 'Reset',
       data: [
         <?php
         echo $row['ktp'];?>,
@@ -127,8 +127,7 @@ var myChart = new Chart(chr, {
   }
 });
 
-<?php } } ?>
+<?php } } }?>
 </script>
-
 </body>
 </html> 
