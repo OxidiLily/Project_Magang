@@ -90,7 +90,7 @@ if(mysqli_num_rows($qry)>0){
         </button>
       </div>
       <div class="modal-body">
-        <form action="../../kueri/update.php" method="POST">
+        <form action="../../kueri/agenda/update.php" method="POST">
           <div class="form-group">
             <label for="Kegiatan">Kegiatan</label>
             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
@@ -151,7 +151,7 @@ if(mysqli_num_rows($qry)>0){
 <div class="modal fade" id="Hapus<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-    <form action="../../kueri/hapus.php" method="post">
+    <form action="../../kueri/agenda/hapus.php" method="post">
       <div class="modal-header">
         <h5 class="modal-title" id="Hapus<?php echo $row['id']; ?>">Hapus Data Kegiatan "<?php echo $row['kegiatan']; ?>"</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
