@@ -37,7 +37,6 @@ function ShowChart(Chart){
   for (i = 0; i < canva.length; i++) {
     canva[i].style.display = "none";
   }
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(Chart).style.maxWidth = "600px";
+  // menampilkan chart
   document.getElementById(Chart).style.display = "block";
 }

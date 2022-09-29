@@ -60,7 +60,7 @@
   </form>
   <a href="dashboard.php" class="login-botton">Refresh</a>
   <!-- Chart untuk menampilkan statistik -->
-  <canvas id="myChart" class="canvaChart"></canvas>
+  <canvas id="myChart" class="canvaChart" style="max-width: 600px;"></canvas>
 </div>
 
 
