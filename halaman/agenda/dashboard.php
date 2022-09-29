@@ -25,8 +25,26 @@
   
 </div>
 <!-- cek pesan notifikasi -->
+<?php 
+  session_start();
+  if($_SESSION['status']!="login"){
+    header("location:../login/login.php");
+  }
+  
+  ?>
 
 <div id="main">
+<?php include '../header/header.php';
+
+
+if(isset($_GET['pesan'])){
+  if($_GET['pesan'] == "good"){
+    echo '
+    <div class="alert alert-success" style="text-align: center;">
+    Selamat Datang !!  <strong>' .$_SESSION['username'].'</strong>
+    </div>';
+  }
+}?>
   <div class="LogoMenu">
     <span onclick="openNav()">&#9776;</span>
     <a class='fas'href="dashboard.php" style='font-size:24px'>&#xf015;</a>
@@ -34,24 +52,7 @@
     <a class='fas'href="../statistik/input_statistik.php" style='font-size:24px'>&#xf02f;</a>
     <a class='fas'href="../../kueri/validasiLogout.php" style='font-size:24px'>&#xf011;</a>
   </div>
-  <?php 
-
-  session_start();
-  if($_SESSION['status']!="login"){
-    header("location:../login/login.php");
-  }
-  
-  if(isset($_GET['pesan'])){
-		if($_GET['pesan'] == "good"){
-			echo '
-			<div class="alert alert-success" style="text-align: center;">
-			Selamat Datang !!  <strong>' .$_SESSION['username'].'</strong>
-			</div>';
-		}
-	}
-
-  include '../header/header.php';
-?>
+ 
   <p class="atas">Jadwal Kegiatan dan Agenda Hari Ini</p>
 
   <div class="bawah">
